@@ -1,0 +1,9 @@
+$sm: 425px;
+$md: 768px;
+$lg: 992px;
+
+@mixin min_width($screen) {
+  @media (min-width: $screen) {
+    @content;
+  }
+}

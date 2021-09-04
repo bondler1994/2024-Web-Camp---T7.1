@@ -1,0 +1,39 @@
+@use '../base/color';
+@use '../utilities/breakpoint' as *;
+@use 'sass:math';
+
+header {
+  background-color: color.$light-blue;
+}
+.container {
+  max-width: 660px;
+  margin: 0 auto;
+}
+.nav {
+  &_box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  &_list {
+    flex: 0 1 math.div(100%, 3);
+    display: inline-block;
+    padding: 1rem 0;
+    position: relative;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    @include min_width($sm) {
+      font-size: 1.5rem;
+    }
+    &.active::after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 2rem;
+      border-bottom: 5px solid color.$blue;
+    }
+  }
+}
