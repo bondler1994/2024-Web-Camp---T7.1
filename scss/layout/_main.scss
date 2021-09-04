@@ -1,0 +1,68 @@
+@use '../base/color';
+@use '../utilities/breakpoint' as *;
+@use '../componets/taskbox';
+@use '../componets/taskedit';
+
+main {
+  .container {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+}
+
+// .task_top {
+//   @include taskbox.tasknostatus($orange-100);
+// }
+
+.task_check {
+  display: flex;
+  flex: 1;
+}
+
+
+.task_action {
+  display: flex;
+}
+.task_check ~ a i {
+  font-size: 1.3rem;
+  @include min_width($sm) {
+    font-size: 1.5rem;
+  }
+}
+.check_box {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  margin-right: 1rem;
+}
+.task_list {
+  display: inline-block;
+  flex: 1;
+}
+.task_title {
+  width: 100%;
+  font-size: 1.3rem;
+  background-color: unset;
+  overflow: hidden;
+  @include min_width($sm) {
+    font-size: 1.5rem;
+  }
+  &::placeholder {
+    color: color.$black;
+  }
+}
+.task_state {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: .5rem;
+  i {
+    font-size: .8rem;
+    @include min_width($sm) {
+      font-size: 1rem;
+    }
+  }
+}
