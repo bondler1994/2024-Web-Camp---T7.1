@@ -2,6 +2,9 @@
 @use "../base/color" as *;
 
 @mixin chosen {
+    margin: 0 auto;
+    display: block;
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -16,6 +19,7 @@
     min-width: 0;
 
     &__button {
+        height: 76px;
         width: 220px;
         border: none;
         background: none;
@@ -23,26 +27,26 @@
         position: relative;
         @extend %title;
         font-weight: 400;
-        color: $color-darkblue;        
+        color: $color-darkblue;  
+
         &:hover {
             @extend %title;
             font-weight: 500;
             color: $color-white;
         }
         
-        &__::after{
-            @include chosen;
-        }
+    }
+    .focus::after{
+        @include chosen;
     }
 }
 
 .main__header {
-
+    display: flex;
     button {
         display: flex;
         align-items: center;
-
-        width: 620px;
+        flex: 1 1 auto;
         height: 65px;
         padding: 18.5px 33px 18.5px 33px;
         box-sizing: border-box;

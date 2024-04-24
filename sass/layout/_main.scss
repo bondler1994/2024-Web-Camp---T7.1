@@ -1,4 +1,8 @@
+@use "../base/all-base" as *;
+
 .main {
+    padding-bottom: 27px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,6 +13,12 @@
     &__mission {
         flex: 1 1 auto;
         display: flex;
+    }
+
+    &__footer {
+        @extend %status;
+        font-size: 24px;
+        margin-left: 32px;
     }
 }
 

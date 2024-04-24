@@ -1,3 +1,5 @@
+@use "./color" as *;
+
 $mobile:576px;
 $ipad:768px;
 $desktop:992px;
@@ -8,3 +10,49 @@ $extra:1250px;
         @content
     }
 }
+
+
+
+ul{
+    display: none;
+    @include device($ipad){
+        display: inline-block;
+    }
+}
+
+#hamburger:checked + ul {
+    display: inline-block;
+}
+
+@include device($ipad){
+    #hamburger:checked + ul {
+        display: none;
+    }
+ 
+}
+
+
+/////////////////////////////////
+
+.hamburger {
+    color: $color-darkblue;
+    label {
+        display: block;
+    }
+
+    @include device($ipad){
+        label {
+            display: none;
+        }
+
+        
+    }
+}
+input[id="hamburger"] {
+    display: none;
+}
+
+
+/////////////////////////////////
+
+

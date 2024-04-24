@@ -3,11 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            id="meta-description"
+            name="description"
+            content="Used by millions of designers, devs, &amp; content creators. Open-source. Always free. Check out the all-new Sharp Solid icons, available in Font Awesome 6 Pro."
+        />
         <title>v</title>
         <!-- style -->
         <link rel="stylesheet" href="./sass/style.css" />
         <!-- fontawesome -->
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
+        <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-a60ddbceb7292f11c9e430d067b1eb9f.css?vsn=d" />
+
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css" />
+
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css" />
+
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css" />
+
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css" />
+
         <!-- googlefont -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +33,17 @@
     </head>
     <body>
         <header>
+            <div class="hamburger">
+                <div class="hamburger__logo"></div>
+                <label for="hamburger"><i class="fas fa-bars"></i></label>
+            </div>
             <nav class="nav">
-                <button class="nav__button">My Tasks</button>
-                <button class="nav__button">In Progress</button>
-                <button class="nav__button">Completed</button>
+                <input type="checkbox" id="hamburger" />
+                <ul>
+                    <button class="nav__button focus">My Tasks</button>
+                    <button class="nav__button">In Progress</button>
+                    <button class="nav__button">Completed</button>
+                </ul>
             </nav>
         </header>
         <main>
@@ -34,7 +56,8 @@
                         <div class="mission__item project">
                             <div class="project__header">
                                 <input type="checkbox" id="checkbox" />
-                                <label for="checkbox">Cloud project with Dannie</label>
+                                <label for="checkbox"></label>
+                                <span>Cloud project with Dannie</span>
                             </div>
                             <div class="project__body">
                                 <!-- <i class="fa-regular fa-star"></i> -->
@@ -71,7 +94,7 @@
                                         <span>Comment</span>
                                     </div>
                                     <div class="text__body">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="meet him at Lorence Cafe"></textarea>
+                                        <textarea name="" id="" placeholder="meet him at Lorence Cafe"></textarea>
                                     </div>
                                 </div>
                                 <div class="submit">
@@ -79,6 +102,28 @@
                                     <button class="submit__body">＋ Save</button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checklist">
+                    <div class="checklist__item">
+                        <div class="tasks">
+                            <div class="tasks__header">
+                                <input type="checkbox" id="tasks" />
+                                <label for="tasks"></label>
+                                <span>Cloud tasks with Dannie</span>
+                            </div>
+                            <div class="tasks__body">
+                                <!-- <i class="fa-regular fa-star"></i> -->
+                                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                                <!-- <i class="fa-light fa-pen"></i> -->
+                                <i class="fa-solid fa-pen" style="color: #74c0fc"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <i class="fa-light fa-file"></i>
+                            <i class="fa-regular fa-comment-dots"></i>
                         </div>
                     </div>
                 </div>

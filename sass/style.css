@@ -1,4 +1,38 @@
-*, .mission span, .project__header label, .nav__button, .nav__button:hover, .main__header button, .infor__body {
+ul {
+  display: none;
+}
+@media (min-width: 768px) {
+  ul {
+    display: inline-block;
+  }
+}
+
+#hamburger:checked + ul {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  #hamburger:checked + ul {
+    display: none;
+  }
+}
+.hamburger {
+  color: #00408b;
+}
+.hamburger label {
+  display: block;
+}
+@media (min-width: 768px) {
+  .hamburger label {
+    display: none;
+  }
+}
+
+input[id=hamburger] {
+  display: none;
+}
+
+*, .main__footer, .mission span, .project__header label, .tasks__header label, .nav__button, .nav__button:hover, .main__header button, .infor__body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -7,9 +41,14 @@
   color: #000000;
 }
 
-.mission span, .project__header label {
+.mission span, .project__header label, .tasks__header label {
   font-size: 20px;
   color: #000000;
+}
+
+.main__footer {
+  font-style: italic;
+  color: #c8c8c8;
 }
 
 body {
@@ -20,6 +59,7 @@ body {
 
 button,
 input,
+ul,
 p {
   padding: 0;
   margin: 0;
@@ -36,6 +76,7 @@ body {
   min-width: 0;
 }
 .nav__button {
+  height: 76px;
   width: 220px;
   border: none;
   background: none;
@@ -47,7 +88,10 @@ body {
   font-weight: 500;
   color: #ffffff;
 }
-.nav__button__::after {
+.nav .focus::after {
+  margin: 0 auto;
+  display: block;
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -57,10 +101,13 @@ body {
   background-color: #00408b;
 }
 
+.main__header {
+  display: flex;
+}
 .main__header button {
   display: flex;
   align-items: center;
-  width: 620px;
+  flex: 1 1 auto;
   height: 65px;
   padding: 18.5px 33px 18.5px 33px;
   box-sizing: border-box;
@@ -97,6 +144,7 @@ header {
 }
 
 .main {
+  padding-bottom: 27px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,6 +155,10 @@ header {
 .main__mission {
   flex: 1 1 auto;
   display: flex;
+}
+.main__footer {
+  font-size: 24px;
+  margin-left: 32px;
 }
 
 .date__body input {
@@ -203,9 +255,76 @@ textarea {
   flex: 1 1 310px;
 }
 
+.checklist {
+  display: flex;
+}
+.checklist__item {
+  padding: 24px 32px;
+  border-radius: 5px;
+  background-color: #fff2dc;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tasks__header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.tasks__header label {
+  font-weight: 500;
+  position: relative;
+}
+.tasks__header input[id=tasks] + label {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.tasks__header input[id=tasks]:checked + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Sharp";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #4a90e2;
+}
+.tasks__header input[id=tasks] {
+  display: none;
+}
+.tasks__body {
+  display: flex;
+  gap: 32px;
+}
+
+.list {
+  margin-left: 40px;
+  display: flex;
+  gap: 17px;
+}
+
 .mission {
   box-shadow: 0 4px 4px 0 #c8c8c8;
-  width: 620px;
   height: 519px;
   background-color: #f2f2f2;
   border-radius: 5px;
@@ -231,10 +350,37 @@ textarea {
 }
 .project__header label {
   font-weight: 500;
+  position: relative;
 }
-.project__header input {
+.project__header input[id=checkbox] + label {
+  display: inline-block;
   width: 24px;
   height: 24px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.project__header input[id=checkbox]:checked + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Sharp";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #4a90e2;
+}
+.project__header input[id=checkbox] {
+  display: none;
 }
 .project__body {
   display: flex;
