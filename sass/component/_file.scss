@@ -1,0 +1,13 @@
+@use "../base/all-base" as *;
+
+.file {
+    @include interval;
+
+    &__header {
+        @include icon-space;
+    }
+
+    &__body {
+        margin-left: 25px;
+    }
+}

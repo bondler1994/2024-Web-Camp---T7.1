@@ -1,0 +1,15 @@
+@use "../base/font" as *;
+@use "../base/color" as *;
+
+
+.date__body {
+    input {
+        padding: 8px 16px;
+        width: 162px;
+        height: 35px;
+        
+        box-sizing: border-box;
+        border: none;
+        border-radius: 2px;
+    }
+}

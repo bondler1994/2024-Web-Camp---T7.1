@@ -1,1 +1,257 @@
+*, .mission span, .project__header label, .nav__button, .nav__button:hover, .main__header button, .infor__body {
+  font-family: "Roboto", sans-serif;
+}
+
+.nav__button, .nav__button:hover, .main__header button, .infor__body {
+  font-size: 24px;
+  color: #000000;
+}
+
+.mission span, .project__header label {
+  font-size: 20px;
+  color: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  top: 100px;
+  background-color: #e1e1e1;
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+}
+.nav__button {
+  width: 220px;
+  border: none;
+  background: none;
+  position: relative;
+  font-weight: 400;
+  color: #00408b;
+}
+.nav__button:hover {
+  font-weight: 500;
+  color: #ffffff;
+}
+.nav__button__::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 160px;
+  height: 5px;
+  background-color: #00408b;
+}
+
+.main__header button {
+  display: flex;
+  align-items: center;
+  width: 620px;
+  height: 65px;
+  padding: 18.5px 33px 18.5px 33px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #c8c8c8;
+  border: 2px solid #c8c8c8;
+  box-shadow: none;
+}
+.main__header button:hover {
+  color: #757575;
+  border: none;
+  box-shadow: 0 4px 4px 0 #c8c8c8;
+}
+
+.infor__body {
+  font-weight: 400;
+}
+
+.mission {
+  position: relative;
+}
+
+header {
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 76px;
+  width: 100%;
+  background-color: #4a90e2;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 620px;
+  gap: 24px;
+}
+.main__mission {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.date__body input {
+  padding: 8px 16px;
+  width: 162px;
+  height: 35px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 2px;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.date__header {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 9px;
+}
+.date__body {
+  margin-left: 25px;
+  display: flex;
+  gap: 8px;
+}
+
+.file {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.file__header {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 9px;
+}
+.file__body {
+  margin-left: 25px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.text__header {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 9px;
+}
+.text__body {
+  align-self: flex-end;
+  display: flex;
+  width: 445px;
+  height: 120px;
+}
+
+textarea {
+  resize: none;
+  border: none;
+  border-radius: 2px;
+  padding: 8px 16px;
+  flex: 1 1 auto;
+}
+
+.mission {
+  position: relative;
+}
+
+.submit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  border-radius: 0 0 5px 5px;
+}
+.submit__header {
+  color: #d0021b;
+  background-color: #ffffff;
+  border-radius: 0 0 0 5px;
+}
+.submit__body {
+  color: #ffffff;
+  background-color: #4a90e2;
+  border-radius: 0 0 5px 0;
+}
+.submit button {
+  font-size: 24px;
+  border: none;
+  flex: 1 1 310px;
+}
+
+.mission {
+  box-shadow: 0 4px 4px 0 #c8c8c8;
+  width: 620px;
+  height: 519px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+.mission span {
+  font-weight: 500;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff2dc;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid #c8c8c8;
+  padding: 0 32px;
+  height: 76px;
+}
+.project__header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.project__header label {
+  font-weight: 500;
+}
+.project__header input {
+  width: 24px;
+  height: 24px;
+}
+.project__body {
+  display: flex;
+  gap: 32px;
+}
+
+.infor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+}
+.infor__item {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 /*# sourceMappingURL=style.css.map */

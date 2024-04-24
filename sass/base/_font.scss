@@ -1,49 +1,55 @@
 @use "./color" as *;
 
+
 %roboto-family{
     font-family: "Roboto", sans-serif;
 }
 
 %title {
     @extend %roboto-family;
-    font-weight: 500;
+    // font-weight: 500;
     font-size: 24px;
     color: $color-black; 
 }
 
 %subtitle {
     @extend %roboto-family;
-    font-weight: 500;
+    // font-weight: 500;
     font-size: 20px;
     color: $color-black; 
 }
 
 %paragraph {
     @extend %roboto-family;
-    font-weight: 400;
+    // font-weight: 400;
     font-size: 16px;
     color: $color-black;
 }
 
 %remark {
     @extend %roboto-family;
-    font-weight: 400;
+    // font-weight: 400;
     font-size: 16px;
     color: $color-gray-400;
 }
 
 %placeholder {
     @extend %roboto-family;
-    font-weight: 400;
+    // font-weight: 400;
     font-size: 16px;
     color: $color-gray-400;
 }
 
 %status {
     @extend %roboto-family;
-    font-weight: 400;
+    // font-weight: 400;
     font-style: italic;
     color: $color-gray-300;
+}
+
+
+*{
+    @extend %roboto-family;
 }
   
 

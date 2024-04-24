@@ -1,0 +1,16 @@
+@use "../base/color" as *;
+@use "../component/button" as *;
+
+header {
+    top: 0;
+    position: fixed;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 76px;
+    width: 100%;
+    background-color: $color-lightblue;
+}

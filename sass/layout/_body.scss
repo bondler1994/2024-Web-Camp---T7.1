@@ -1,0 +1,8 @@
+@use "../base/all-base" as *;
+
+body {
+    position: relative;
+    top: 100px;
+
+    background-color: $color-gray-200;
+}

@@ -1,0 +1,12 @@
+
+@mixin interval {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@mixin icon-space{
+    display: flex;
+    flex: 1 1 auto;
+    gap: 9px;
+}

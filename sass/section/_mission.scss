@@ -1,0 +1,53 @@
+@use "../base/all-base" as *;
+
+.mission {
+
+    box-shadow: 0 4px 4px 0 $color-gray-300;
+
+    width: 620px;
+    height: 519px;
+    background-color: $color-gray-100;
+    border-radius: 5px;
+
+    span {
+        @extend %subtitle;
+        font-weight: 500;
+    }
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: $color-rice;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid $color-gray-300;
+    padding: 0 32px;
+    height: 76px;
+
+    &__header {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        label {
+            @extend %subtitle;
+            font-weight: 500;    
+        }
+
+        input{
+            width: 24px;
+            height: 24px;
+        }
+
+        input[type="checkbox"] {
+
+        }
+    }
+
+    &__body {
+        display: flex;
+        gap: 32px;
+    }
+}
