@@ -15,16 +15,16 @@
 .nav {
     display: flex;
     justify-content: center;
-    flex-direction: column; 
-    
+    flex-direction: column;
+
     min-width: 0;
-    
+
     @include device($ipad) {
-        flex-direction: row; 
+        flex-direction: row;
     }
 
     &__header,
-    &__body{
+    &__body {
         display: flex;
         justify-content: center;
     }
@@ -38,16 +38,15 @@
         position: relative;
         @extend %title;
         font-weight: 400;
-        color: $color-darkblue;  
+        color: $color-darkblue;
 
         &:hover {
             @extend %title;
             font-weight: 500;
             color: $color-white;
         }
-        
     }
-    .focus::after{
+    .focus::after {
         @include chosen;
     }
 }
@@ -64,7 +63,7 @@
 
         border-radius: 5px;
         background-color: $color-white;
-        
+
         color: $color-gray-300;
         border: 2px solid $color-gray-300;
         box-shadow: none;
@@ -76,8 +75,6 @@
             box-shadow: 0 4px 4px 0 $color-gray-300;
         }
     }
-
-
 }
 
 .infor__body {
