@@ -1,38 +1,4 @@
-ul {
-  display: none;
-}
-@media (min-width: 768px) {
-  ul {
-    display: inline-block;
-  }
-}
-
-#hamburger:checked + ul {
-  display: inline-block;
-}
-
-@media (min-width: 768px) {
-  #hamburger:checked + ul {
-    display: none;
-  }
-}
-.hamburger {
-  color: #00408b;
-}
-.hamburger label {
-  display: block;
-}
-@media (min-width: 768px) {
-  .hamburger label {
-    display: none;
-  }
-}
-
-input[id=hamburger] {
-  display: none;
-}
-
-*, .main__footer, .mission span, .project__header label, .tasks__header label, .nav__button, .nav__button:hover, .main__header button, .infor__body {
+*, .main__footer, .useless label, .mission span, .add__header label, .project__header label, .tasks__header label, .nav__button, .nav__button:hover, .main__header button, .infor__body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -41,7 +7,7 @@ input[id=hamburger] {
   color: #000000;
 }
 
-.mission span, .project__header label, .tasks__header label {
+.useless label, .mission span, .add__header label, .project__header label, .tasks__header label {
   font-size: 20px;
   color: #000000;
 }
@@ -67,13 +33,29 @@ p {
 
 body {
   position: relative;
-  top: 100px;
+  top: 176px;
   background-color: #e1e1e1;
+}
+@media (min-width: 768px) {
+  body {
+    top: 100px;
+  }
 }
 
 .nav {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   min-width: 0;
+}
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+  }
+}
+.nav__header, .nav__body {
+  display: flex;
+  justify-content: center;
 }
 .nav__button {
   height: 76px;
@@ -89,14 +71,13 @@ body {
   color: #ffffff;
 }
 .nav .focus::after {
-  margin: 0 auto;
+  margin: 0 30px;
   display: block;
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 160px;
   height: 5px;
   background-color: #00408b;
 }
@@ -131,6 +112,10 @@ body {
   position: relative;
 }
 
+.event {
+  position: relative;
+}
+
 header {
   top: 0;
   position: fixed;
@@ -138,7 +123,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 76px;
   width: 100%;
   background-color: #4a90e2;
 }
@@ -148,9 +132,15 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 620px;
+  padding: 0 24px;
+  margin: 0;
   gap: 24px;
+}
+@media (min-width: 768px) {
+  .main {
+    margin: 0 auto;
+    max-width: 620px;
+  }
 }
 .main__mission {
   flex: 1 1 auto;
@@ -170,6 +160,126 @@ header {
   border-radius: 2px;
 }
 
+.file input[type=file] {
+  display: none;
+}
+.file label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
+  color: #ffffff;
+  background-color: #c8c8c8;
+}
+
+.useless label {
+  font-weight: 500;
+  position: relative;
+}
+.useless .disable {
+  color: #c8c8c8;
+  text-decoration: line-through;
+}
+.useless input[id=line-through] + label {
+  flex: 1 0 auto;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.useless input[id=line-through]:checked + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Sharp";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #4a90e2;
+}
+.useless input[id=line-through] {
+  display: none;
+}
+.useless input[id=nearly] + label {
+  flex: 1 0 auto;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.useless input[id=nearly]:checked + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Sharp";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #4a90e2;
+}
+.useless input[id=nearly] {
+  display: none;
+}
+
+input[id=Prepare] + label {
+  flex: 1 0 auto;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[id=Prepare]:checked + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Sharp";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #4a90e2;
+}
+
+input[id=Prepare] {
+  display: none;
+}
+
 .date {
   display: flex;
   flex-direction: column;
@@ -184,6 +294,12 @@ header {
   margin-left: 25px;
   display: flex;
   gap: 8px;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  .date__body {
+    flex-direction: row;
+  }
 }
 
 .file {
@@ -213,8 +329,13 @@ header {
 .text__body {
   align-self: flex-end;
   display: flex;
-  width: 445px;
+  width: 100%;
   height: 120px;
+}
+@media (min-width: 768px) {
+  .text__body {
+    width: 445px;
+  }
 }
 
 textarea {
@@ -223,6 +344,12 @@ textarea {
   border-radius: 2px;
   padding: 8px 16px;
   flex: 1 1 auto;
+  margin-left: 25px;
+}
+@media (min-width: 768px) {
+  textarea {
+    margin-left: 0;
+  }
 }
 
 .mission {
@@ -259,6 +386,9 @@ textarea {
   display: flex;
 }
 .checklist__item {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   padding: 24px 32px;
   border-radius: 5px;
   background-color: #fff2dc;
@@ -274,6 +404,9 @@ textarea {
   justify-content: space-between;
 }
 .tasks__header {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   display: flex;
   gap: 16px;
   align-items: center;
@@ -283,6 +416,7 @@ textarea {
   position: relative;
 }
 .tasks__header input[id=tasks] + label {
+  flex: 1 0 auto;
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -321,13 +455,35 @@ textarea {
   margin-left: 40px;
   display: flex;
   gap: 17px;
+  color: #757575;
+}
+
+.useless {
+  display: flex;
+}
+.useless__item {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 24px 32px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .mission {
   box-shadow: 0 4px 4px 0 #c8c8c8;
-  height: 519px;
+  height: 558px;
   background-color: #f2f2f2;
   border-radius: 5px;
+}
+@media (min-width: 576px) {
+  .mission {
+    height: 519px;
+  }
 }
 .mission span {
   font-weight: 500;
@@ -344,6 +500,9 @@ textarea {
   height: 76px;
 }
 .project__header {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   display: flex;
   gap: 16px;
   align-items: center;
@@ -353,6 +512,7 @@ textarea {
   position: relative;
 }
 .project__header input[id=checkbox] + label {
+  flex: 1 0 auto;
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -391,13 +551,101 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 24px;
+  padding: 24px;
+}
+@media (min-width: 768px) {
+  .infor {
+    padding-top: 24px;
+  }
 }
 .infor__item {
-  width: 470px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+@media (min-width: 768px) {
+  .infor__item {
+    width: 470px;
+  }
+}
+
+.mission {
+  box-shadow: 0 4px 4px 0 #c8c8c8;
+  height: 558px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+@media (min-width: 576px) {
+  .mission {
+    height: 519px;
+  }
+}
+.mission span {
+  font-weight: 500;
+}
+.mission .add {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid #c8c8c8;
+  padding: 0 32px;
+  height: 76px;
+}
+.add__header {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.add__header label {
+  font-weight: 500;
+  position: relative;
+}
+.add__header input[id=checkbox] + label {
+  flex: 1 0 auto;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.add__header input[id=checkbox]:checked + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Sharp";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #4a90e2;
+}
+.add__header input[id=checkbox] {
+  display: none;
+}
+.add__body {
+  display: flex;
+  gap: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */

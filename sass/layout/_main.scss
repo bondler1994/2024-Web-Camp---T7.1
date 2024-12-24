@@ -2,12 +2,15 @@
 
 .main {
     padding-bottom: 27px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
-    max-width: 620px;
+    padding: 0 24px;
+    margin: 0;
+    @include device($ipad){
+        margin: 0 auto;
+        max-width: 620px;
+    }
     gap: 24px;
 
     &__mission {

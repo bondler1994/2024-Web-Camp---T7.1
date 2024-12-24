@@ -15,4 +15,159 @@
     }
 }
 
+.file {
+
+    input[type="file"] {
+        display: none;
+      }
+      
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        border-radius: 2px;
+
+        color: $color-white;
+        background-color: $color-gray-300;
+      }
+
+
+}
+
+
+.useless {
+  
+  label {
+    @extend %subtitle;
+    font-weight: 500;
+    position: relative;
+}
+
+.disable {
+  color: $color-gray-300;
+  text-decoration: line-through;
+}
+
+// 改變checkbox樣式
+input[id="line-through"] + label {
+    flex: 1 0 auto;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: $color-white;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  input[id="line-through"]:checked + label:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+
+    border-radius: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Sharp";
+    
+    font-size: 20px;
+    color: $color-white;
+    background-color: $color-lightblue;
+
+  }
+  input[id="line-through"] {
+    display: none;
+}
+
+
+/////////////////////////////////
+
+input[id="nearly"] + label {
+  flex: 1 0 auto;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: $color-white;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+input[id="nearly"]:checked + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+
+  border-radius: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Sharp";
+  
+  font-size: 20px;
+  color: $color-white;
+  background-color: $color-lightblue;
+
+}
+input[id="nearly"] {
+  display: none;
+}
+  
+
+}
+
+/////////////////////////////////
+
+input[id="Prepare"] + label {
+  flex: 1 0 auto;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: $color-white;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+input[id="Prepare"]:checked + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+
+  border-radius: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Sharp";
+  
+  font-size: 20px;
+  color: $color-white;
+  background-color: $color-lightblue;
+
+}
+input[id="Prepare"] {
+  display: none;
+}
+  
+
+
 
