@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const switchBarForFocusOption = document.querySelector("nav");
 const navButtons = document.querySelectorAll(".nav__button");
 const focusNavBar = document.querySelector(".focus");
@@ -54,3 +55,12 @@ function switchNavBar(e) {
 switchBarForFocusOption.addEventListener("click", switchNavBar);
 console.log(switchBarForFocusOption.childNodes[1]);
 console.log(switchBarForFocusOption.childNodes[3]);
+=======
+function testStyle() {
+    const switchBarForFocusOption = document.querySelector(".focus");
+    console.log("fuck");
+    
+}
+
+document.addEventListener("click", testStyle);
+>>>>>>> 26fa41d (take shit back)
