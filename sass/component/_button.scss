@@ -74,6 +74,11 @@
             border: none;
             box-shadow: 0 4px 4px 0 $color-gray-300;
         }
+        &:active {
+            border: 0.5px solid $color-gray-300;
+            box-shadow: 4px 4px 3px 0 rgba(255, 255, 255, 0.3), -4px -4px 3px 0 rgba(116, 125, 136, 0.2),
+                inset -4px -4px 3px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 3px 0 rgba(0, 0, 0, 0.2);
+        }
     }
 }
 

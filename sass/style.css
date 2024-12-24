@@ -103,6 +103,10 @@ body {
   border: none;
   box-shadow: 0 4px 4px 0 #c8c8c8;
 }
+.main__header button:active {
+  border: 0.5px solid #c8c8c8;
+  box-shadow: 4px 4px 3px 0 rgba(255, 255, 255, 0.3), -4px -4px 3px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 3px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 3px 0 rgba(0, 0, 0, 0.2);
+}
 
 .infor__body {
   font-weight: 400;
