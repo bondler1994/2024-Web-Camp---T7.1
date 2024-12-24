@@ -44,27 +44,7 @@ body {
 
 .nav {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   min-width: 0;
-}
-@media (min-width: 768px) {
-  .nav {
-    flex-direction: row;
-  }
-}
-.nav__header, .nav__body {
-  display: flex;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .nav {
-    flex-direction: row;
-  }
-}
-.nav__header, .nav__body {
-  display: flex;
-  justify-content: center;
 }
 .nav__button {
   height: 76px;
@@ -80,7 +60,7 @@ body {
   color: #ffffff;
 }
 .nav .focus::after {
-  margin: 0 30px;
+  margin: 0 auto;
   display: block;
   content: "";
   position: absolute;
