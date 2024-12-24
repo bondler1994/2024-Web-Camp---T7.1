@@ -1,13 +1,13 @@
 @use "./color" as *;
 
-$mobile:576px;
-$ipad:768px;
-$desktop:992px;
-$extra:1250px;
+$mobile: 576px;
+$ipad: 768px;
+$desktop: 992px;
+$extra: 1250px;
 
-@mixin device ($scale) {
-    @media (min-width:$scale) {
-        @content
+@mixin device($scale) {
+    @media (min-width: $scale) {
+        @content;
     }
 }
 
@@ -29,9 +29,7 @@ $extra:1250px;
 //         display: none;
 //     }
 
- 
 // }
-
 
 /////////////////////////////////
 
@@ -46,13 +44,10 @@ $extra:1250px;
 //             display: none;
 //         }
 
-        
 //     }
 // }
 // input[id="hamburger"] {
 //     display: none;
 // }
 
-
 /////////////////////////////////
-

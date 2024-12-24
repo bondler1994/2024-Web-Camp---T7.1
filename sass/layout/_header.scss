@@ -1,5 +1,6 @@
 @use "../base/color" as *;
 @use "../component/button" as *;
+@use "../base/breckpoint" as *;
 
 header {
     top: 0;
@@ -14,4 +15,15 @@ header {
     // min-height: 76px;
     width: 100%;
     background-color: $color-lightblue;
+}
+
+.nav__header {
+    display: flex;
+    flex-direction: row;
+
+    @include device($ipad) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
