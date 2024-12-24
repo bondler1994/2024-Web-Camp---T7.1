@@ -11,48 +11,48 @@ $extra:1250px;
     }
 }
 
+////////
 
+// ul{
+//     display: none;
+//     @include device($ipad){
+//         display: inline-block;
+//     }
+// }
 
-ul{
-    display: none;
-    @include device($ipad){
-        display: inline-block;
-    }
-}
+// #hamburger:checked + ul {
+//     display: inline-block;
+// }
 
-#hamburger:checked + ul {
-    display: inline-block;
-}
+// @include device($ipad){
+//     #hamburger:checked + ul {
+//         display: none;
+//     }
 
-@include device($ipad){
-    #hamburger:checked + ul {
-        display: none;
-    }
  
-}
+// }
 
 
 /////////////////////////////////
 
-.hamburger {
-    color: $color-darkblue;
-    label {
-        display: block;
-    }
+// .hamburger {
+//     color: $color-darkblue;
+//     label {
+//         display: block;
+//     }
 
-    @include device($ipad){
-        label {
-            display: none;
-        }
+//     @include device($ipad){
+//         label {
+//             display: none;
+//         }
 
         
-    }
-}
-input[id="hamburger"] {
-    display: none;
-}
+//     }
+// }
+// input[id="hamburger"] {
+//     display: none;
+// }
 
 
 /////////////////////////////////
-
 

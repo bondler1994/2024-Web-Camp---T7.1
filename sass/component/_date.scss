@@ -12,6 +12,10 @@
         margin-left: 25px;
         display: flex;
         gap: 8px;
+        flex-direction: column;
 
+        @include device ($mobile) {
+            flex-direction: row;
+        }
     }
 }

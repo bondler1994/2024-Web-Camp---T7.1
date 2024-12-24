@@ -5,14 +5,21 @@
     box-shadow: 0 4px 4px 0 $color-gray-300;
 
     // width: 620px;
-    height: 519px;
+    height: 558px;
+    @include device($mobile){
+        height: 519px;
+
+    }
     background-color: $color-gray-100;
     border-radius: 5px;
 
     span {
         @extend %subtitle;
         font-weight: 500;
+
     }
+
+
 }
 
 .project {
@@ -27,6 +34,7 @@
     height: 76px;
 
     &__header {
+        @include ellipsis;
         display: flex;
         gap: 16px;
         align-items: center;
@@ -37,13 +45,11 @@
             position: relative;
         }
 
-        // input{
-        //     width: 24px;
-        //     height: 24px;
-        // }
+        
 
         // 改變checkbox樣式
         input[id="checkbox"] + label {
+            flex: 1 0 auto;
             display: inline-block;
             width: 24px;
             height: 24px;

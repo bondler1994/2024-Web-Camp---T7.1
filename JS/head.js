@@ -1,0 +1,1 @@
+const switchBarForSelectiveOption = document.querySelector("")

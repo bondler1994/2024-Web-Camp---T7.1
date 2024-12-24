@@ -8,19 +8,15 @@
             name="description"
             content="Used by millions of designers, devs, &amp; content creators. Open-source. Always free. Check out the all-new Sharp Solid icons, available in Font Awesome 6 Pro."
         />
-        <title>v</title>
+        <title>to do list</title>
         <!-- style -->
         <link rel="stylesheet" href="./sass/style.css" />
         <!-- fontawesome -->
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
         <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-a60ddbceb7292f11c9e430d067b1eb9f.css?vsn=d" />
-
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css" />
-
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css" />
-
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css" />
-
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css" />
 
         <!-- googlefont -->
@@ -33,17 +29,14 @@
     </head>
     <body>
         <header>
-            <div class="hamburger">
-                <div class="hamburger__logo"></div>
-                <label for="hamburger"><i class="fas fa-bars"></i></label>
-            </div>
             <nav class="nav">
-                <input type="checkbox" id="hamburger" />
-                <ul>
+                <div class="nav__header">
                     <button class="nav__button focus">My Tasks</button>
+                </div>
+                <div class="nav__body">
                     <button class="nav__button">In Progress</button>
                     <button class="nav__button">Completed</button>
-                </ul>
+                </div>
             </nav>
         </header>
         <main>
@@ -57,7 +50,9 @@
                             <div class="project__header">
                                 <input type="checkbox" id="checkbox" />
                                 <label for="checkbox"></label>
-                                <span>Cloud project with Dannie</span>
+                                <div class="">
+                                    <span>Cloud project with Dannie</span>
+                                </div>
                             </div>
                             <div class="project__body">
                                 <!-- <i class="fa-regular fa-star"></i> -->
@@ -66,6 +61,7 @@
                                 <i class="fa-solid fa-pen" style="color: #74c0fc"></i>
                             </div>
                         </div>
+                        <!-- infor -->
                         <div class="mission__item infor">
                             <div class="infor__item">
                                 <div class="date">
@@ -84,8 +80,8 @@
                                         <span>File</span>
                                     </div>
                                     <div class="file__body">
-                                        <label for="file"></label>
-                                        <input type="file" placeholder="＋" />
+                                        <label for="file">＋</label>
+                                        <input type="file" id="file" />
                                     </div>
                                 </div>
                                 <div class="text">
@@ -105,6 +101,64 @@
                         </div>
                     </div>
                 </div>
+                <!-- add -->
+                <div class="main__body">
+                    <div class="mission">
+                        <div class="mission__item add">
+                            <div class="add__header">
+                                <input type="checkbox" id="Prepare" />
+                                <label for="Prepare"></label>
+                                <div class="">
+                                    <span>Cloud add with Dannie</span>
+                                </div>
+                            </div>
+                            <div class="add__body">
+                                <!-- <i class="fa-regular fa-star"></i> -->
+                                <i class="fa-regular fa-star"></i>
+                                <!-- <i class="fa-light fa-pen"></i> -->
+                                <i class="fa-solid fa-pen" style="color: #74c0fc"></i>
+                            </div>
+                        </div>
+                        <!-- infor -->
+                        <div class="mission__item infor">
+                            <div class="infor__item">
+                                <div class="date">
+                                    <div class="date__header">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        <span>Deadline</span>
+                                    </div>
+                                    <div class="date__body">
+                                        <input type="date" />
+                                        <input type="time" />
+                                    </div>
+                                </div>
+                                <div class="file">
+                                    <div class="file__header">
+                                        <i class="fa-light fa-file"></i>
+                                        <span>File</span>
+                                    </div>
+                                    <div class="file__body">
+                                        <label for="file">＋</label>
+                                        <input type="file" id="file" />
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <div class="text__header">
+                                        <i class="fa-regular fa-comment-dots"></i>
+                                        <span>Comment</span>
+                                    </div>
+                                    <div class="text__body">
+                                        <textarea name="" id="" placeholder="meet him at Lorence Cafe"></textarea>
+                                    </div>
+                                </div>
+                                <div class="submit">
+                                    <button class="submit__header">X Cancel</button>
+                                    <button class="submit__body">＋ Add Task</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="checklist">
                     <div class="checklist__item">
                         <div class="tasks">
@@ -117,7 +171,7 @@
                                 <!-- <i class="fa-regular fa-star"></i> -->
                                 <i class="fa-solid fa-star" style="color: #ffd43b"></i>
                                 <!-- <i class="fa-light fa-pen"></i> -->
-                                <i class="fa-solid fa-pen" style="color: #74c0fc"></i>
+                                <i class="fa-light fa-pen"></i>
                             </div>
                         </div>
                         <div class="list">
@@ -127,11 +181,54 @@
                         </div>
                     </div>
                 </div>
+                <div class="useless">
+                    <div class="useless__item">
+                        <div class="tasks">
+                            <div class="tasks__header">
+                                <input type="checkbox" id="nearly" />
+                                <label for="nearly"></label>
+                                <span>Cloud tasks with Dannie</span>
+                            </div>
+                            <div class="tasks__body">
+                                <!-- <i class="fa-regular fa-star"></i> -->
+                                <i class="fa-regular fa-star"></i>
+                                <!-- <i class="fa-light fa-pen"></i> -->
+                                <i class="fa-light fa-pen"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <i class="fa-light fa-file"></i>
+                            <i class="fa-regular fa-comment-dots"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="useless">
+                    <div class="useless__item">
+                        <div class="tasks">
+                            <div class="tasks__header">
+                                <input type="checkbox" id="line-through" />
+                                <label for="line-through"></label>
+                                <span class="disable">Cloud tasks with Dannie</span>
+                            </div>
+                            <div class="tasks__body">
+                                <!-- <i class="fa-regular fa-star"></i> -->
+                                <i class="fa-regular fa-star"></i>
+                                <!-- <i class="fa-light fa-pen"></i> -->
+                                <i class="fa-light fa-pen"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="main__footer">
                     <p>0 tasks left</p>
                 </div>
             </div>
         </main>
+<<<<<<< HEAD:to_do_list.html
         <script src=""></script>
+=======
+        <script src="JS/head.js"></script>
+>>>>>>> 9eec6dc (start my to do list journey, make JS file):my_tasks.html
     </body>
 </html>

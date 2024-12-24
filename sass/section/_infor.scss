@@ -1,4 +1,4 @@
-@use "../base/all-base";
+@use "../base/all-base" as *;
 
 
 
@@ -7,10 +7,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 24px;
+
+    padding: 24px;
+    @include device($ipad) {
+        padding-top: 24px;
+    }
 
     &__item {
-        width: 470px;
+        width: 100%;
+        @include device($ipad) {
+            width: 470px;
+        }
+
         display: flex;
         flex-direction: column;
         gap: 24px;

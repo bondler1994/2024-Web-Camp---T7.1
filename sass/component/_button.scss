@@ -1,22 +1,33 @@
-@use "../base/font" as *;
-@use "../base/color" as *;
+@use "../base/all-base" as *;
 
 @mixin chosen {
-    margin: 0 auto;
+    margin: 0 30px;
     display: block;
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 160px;
     height: 5px;
     background-color: $color-darkblue;
 }
 
 .nav {
     display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    
     min-width: 0;
+    
+    @include device($ipad) {
+        flex-direction: row; 
+    }
+
+    &__header,
+    &__body{
+        display: flex;
+        justify-content: center;
+    }
 
     &__button {
         height: 76px;
@@ -76,6 +87,8 @@
 
 .mission {
     position: relative;
+}
 
-    
+.event {
+    position: relative;
 }
