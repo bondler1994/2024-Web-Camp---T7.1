@@ -57,6 +57,15 @@ body {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+  }
+}
+.nav__header, .nav__body {
+  display: flex;
+  justify-content: center;
+}
 .nav__button {
   height: 76px;
   width: 220px;

@@ -29,6 +29,16 @@
         justify-content: center;
     }
 
+    @include device($ipad) {
+        flex-direction: row;
+    }
+
+    &__header,
+    &__body {
+        display: flex;
+        justify-content: center;
+    }
+
     &__button {
         height: 76px;
         width: 220px;
