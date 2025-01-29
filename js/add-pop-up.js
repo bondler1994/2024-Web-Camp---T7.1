@@ -1,11 +1,12 @@
 const addTaskButton = document.querySelector(".main__header");
 const closeTaskButton = document.querySelectorAll(".submit__header");
-const sss = document.querySelectorAll(".mission");
+const missions = document.querySelectorAll(".mission");
 
 addTaskButton.addEventListener("click", () => {
-    sss.classList.add("open");
+    missions.classList.add("open");
+    console.log("eeee");
 });
 
 closeTaskButton.addEventListener("click", () => {
-    sss.classList.remove("open");
+    missions.classList.remove("open");
 });
