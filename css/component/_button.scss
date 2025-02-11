@@ -2,83 +2,86 @@
 @use "../base/color" as *;
 
 @mixin chosen {
-    margin: 0 auto;
-    display: block;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background-color: $color-darkblue;
+  margin: 0 auto;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: $color-darkblue;
 }
 
 .nav {
-    display: flex;
-    min-width: 0;
+  display: flex;
+  min-width: 0;
 
-    &__button {
-        height: 76px;
-        width: 220px;
-        border: none;
-        background: none;
+  &__button {
+    height: 76px;
+    width: 220px;
+    border: none;
+    background: none;
 
-        position: relative;
-        @extend %title;
-        font-weight: 400;
-        color: $color-darkblue;
+    position: relative;
+    @extend %title;
+    font-weight: 400;
+    color: $color-darkblue;
 
-        &:hover {
-            @extend %title;
-            font-weight: 500;
-            color: $color-white;
-        }
+    &:hover {
+      @extend %title;
+      font-weight: 500;
+      color: $color-white;
     }
-    .focus::after {
-        @include chosen;
-    }
+  }
+  &__body {
+    @mixin
+}
+  .focus::after {
+    @include chosen;
+  }
 }
 
 .main__header {
+  display: flex;
+  button {
     display: flex;
-    button {
-        display: flex;
-        align-items: center;
-        flex: 1 1 auto;
-        height: 65px;
-        padding: 18.5px 33px 18.5px 33px;
-        box-sizing: border-box;
+    align-items: center;
+    flex: 1 1 auto;
+    height: 65px;
+    padding: 18.5px 33px 18.5px 33px;
+    box-sizing: border-box;
 
-        border-radius: 5px;
-        background-color: $color-white;
+    border-radius: 5px;
+    background-color: $color-white;
 
-        color: $color-gray-300;
-        border: 2px solid $color-gray-300;
-        box-shadow: none;
-        @extend %title;
+    color: $color-gray-300;
+    border: 2px solid $color-gray-300;
+    box-shadow: none;
+    @extend %title;
 
-        &:hover {
-            color: $color-gray-400;
-            border: none;
-            box-shadow: 0 4px 4px 0 $color-gray-300;
-        }
-        &:active {
-            border: 0.5px solid $color-gray-300;
-            box-shadow: 4px 4px 3px 0 rgba(255, 255, 255, 0.3), -4px -4px 3px 0 rgba(116, 125, 136, 0.2),
-                inset -4px -4px 3px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 3px 0 rgba(0, 0, 0, 0.2);
-        }
+    &:hover {
+      color: $color-gray-400;
+      border: none;
+      box-shadow: 0 4px 4px 0 $color-gray-300;
     }
+    &:active {
+      border: 0.5px solid $color-gray-300;
+      box-shadow: 4px 4px 3px 0 rgba(255, 255, 255, 0.3), -4px -4px 3px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 3px 0 rgba(255, 255, 255, 0.2),
+        inset 4px 4px 3px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 .infor__body {
-    @extend %title;
-    font-weight: 400;
+  @extend %title;
+  font-weight: 400;
 }
 
 .mission {
-    position: relative;
+  position: relative;
 }
 
 .event {
-    position: relative;
+  position: relative;
 }
