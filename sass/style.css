@@ -666,5 +666,13 @@ textarea {
   display: flex;
   gap: 32px;
 }
+.add__items input {
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+}
+.add__items input:focus {
+  outline: none;
+}
 
 /*# sourceMappingURL=style.css.map */

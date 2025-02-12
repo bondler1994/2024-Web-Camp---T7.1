@@ -1,15 +1,18 @@
 const addTaskButton = document.querySelector(".main__body");
 function clickToAddTask() {
   addTaskButton.innerHTML += `
-    <div class="main__body">
+        <div class="main__body">
           <div class="mission">
             <div class="mission__item add">
               <div class="add__header">
                 <input type="checkbox" id="Prepare" />
                 <label for="Prepare"></label>
-                <div class="">
+                <form class="add__items">
+                  <input type="text" name="item" placeholder="Pls add u task" required />
+                </form>
+                <!-- <div class="">
                   <span>Cloud add with Dannie</span>
-                </div>
+                </div> -->
               </div>
               <div class="add__body">
                 <!-- <i class="fa-regular fa-star"></i> -->

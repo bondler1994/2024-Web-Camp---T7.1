@@ -1,97 +1,101 @@
 @use "../base/all-base" as *;
 
 .mission {
+  box-shadow: 0 4px 4px 0 $color-gray-300;
 
-    box-shadow: 0 4px 4px 0 $color-gray-300;
+  // width: 620px;
+  height: 558px;
+  @include device($mobile) {
+    height: 519px;
+  }
+  background-color: $color-gray-100;
+  border-radius: 5px;
 
-    // width: 620px;
-    height: 558px;
-    @include device($mobile){
-        height: 519px;
+  span {
+    @extend %subtitle;
+    font-weight: 500;
+  }
 
-    }
-    background-color: $color-gray-100;
-    border-radius: 5px;
-
-    span {
-        @extend %subtitle;
-        font-weight: 500;
-
-    }
-
-    .add {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .add {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $color-gray-100;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid $color-gray-300;
+  padding: 0 32px;
+  height: 76px;
+
+  &__header {
+    @include ellipsis;
     display: flex;
+    gap: 16px;
     align-items: center;
-    justify-content: space-between;
-    
-    background-color: $color-gray-100;
-    border-radius: 5px 5px 0 0;
-    border-bottom: 2px solid $color-gray-300;
-    padding: 0 32px;
-    height: 76px;
 
-    &__header {
-        @include ellipsis;
-        display: flex;
-        gap: 16px;
-        align-items: center;
-
-        label {
-            @extend %subtitle;
-            font-weight: 500;    
-            position: relative;
-        }
-
-        
-
-        // 改變checkbox樣式
-        input[id="checkbox"] + label {
-            flex: 1 0 auto;
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            background-color: $color-white;
-            border: 0;
-            border-radius: 2px;
-            cursor: pointer;
-          }
-
-          input[id="checkbox"]:checked + label:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            text-align: center;
-
-            border-radius: 2px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            content: "\f00c";
-            font-weight: 900;
-            font-family: "Font Awesome 6 Sharp";
-            
-            font-size: 20px;
-            color: $color-white;
-            background-color: $color-lightblue;
-          }
-          input[id="checkbox"] {
-            display: none;
-          }
-
+    label {
+      @extend %subtitle;
+      font-weight: 500;
+      position: relative;
     }
 
-    &__body {
-        display: flex;
-        gap: 32px;
+    // 改變checkbox樣式
+    input[id="checkbox"] + label {
+      flex: 1 0 auto;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-color: $color-white;
+      border: 0;
+      border-radius: 2px;
+      cursor: pointer;
     }
+
+    input[id="checkbox"]:checked + label:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+
+      border-radius: 2px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: "\f00c";
+      font-weight: 900;
+      font-family: "Font Awesome 6 Sharp";
+
+      font-size: 20px;
+      color: $color-white;
+      background-color: $color-lightblue;
+    }
+    input[id="checkbox"] {
+      display: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    gap: 32px;
+  }
+  &__items {
+    input {
+      border: none;
+      outline: none;
+      background-color: $color-gray-100;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }
