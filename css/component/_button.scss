@@ -1,6 +1,6 @@
 @use "../base/font" as *;
 @use "../base/color" as *;
-
+@use "../base/breckpoint" as *;
 @mixin chosen {
   margin: 0 auto;
   display: block;
@@ -35,8 +35,12 @@
     }
   }
   &__body {
-    @mixin
-}
+    @include device($mobile) {
+      display: block;
+    }
+    display: flex;
+    flex-direction: column;
+  }
   .focus::after {
     @include chosen;
   }

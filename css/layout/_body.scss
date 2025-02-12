@@ -1,14 +1,12 @@
 @use "../base/all-base" as *;
 
 body {
-    position: relative;
-    top: 176px;
-    
+  position: relative;
+  top: 176px;
 
-    @include device($ipad) {
-        top: 100px;
+  @include device($ipad) {
+    top: 100px;
+  }
 
-    }
-
-    background-color: $color-gray-200;
+  background-color: $color-gray-200;
 }
