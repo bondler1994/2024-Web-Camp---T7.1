@@ -2,11 +2,14 @@
 
 body {
   position: relative;
-  top: 176px;
+  top: 252px;
+
+  @include device($mobile) {
+    top: 176px;
+  }
 
   @include device($ipad) {
     top: 100px;
   }
-
   background-color: $color-gray-200;
 }

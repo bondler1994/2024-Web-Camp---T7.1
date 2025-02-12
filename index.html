@@ -46,7 +46,7 @@
     <main>
       <div class="main">
         <div class="main__header">
-          <button>＋ Add Task</button>
+          <button onclick="clickToAddTask()">＋ Add Task</button>
         </div>
         <div class="main__body">
           <div class="mission">
@@ -115,9 +115,12 @@
               <div class="add__header">
                 <input type="checkbox" id="Prepare" />
                 <label for="Prepare"></label>
-                <div class="">
+                <form class="add-items">
+                  <input type="text" name="item" placeholder="Pls add u task" required />
+                </form>
+                <!-- <div class="">
                   <span>Cloud add with Dannie</span>
-                </div>
+                </div> -->
               </div>
               <div class="add__body">
                 <!-- <i class="fa-regular fa-star"></i> -->

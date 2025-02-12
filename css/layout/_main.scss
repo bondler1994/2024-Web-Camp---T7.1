@@ -1,27 +1,26 @@
 @use "../base/all-base" as *;
 
 .main {
-    padding-bottom: 27px;
+  padding-bottom: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 24px;
+  margin: 0;
+  @include device($ipad) {
+    margin: 0 auto;
+    max-width: 620px;
+  }
+  gap: 24px;
+
+  &__mission {
+    flex: 1 1 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 24px;
-    margin: 0;
-    @include device($ipad){
-        margin: 0 auto;
-        max-width: 620px;
-    }
-    gap: 24px;
+  }
 
-    &__mission {
-        flex: 1 1 auto;
-        display: flex;
-    }
-
-    &__footer {
-        @extend %status;
-        font-size: 24px;
-        margin-left: 32px;
-    }
+  &__footer {
+    @extend %status;
+    font-size: 24px;
+    margin-left: 32px;
+  }
 }
-
