@@ -28,27 +28,7 @@ function switchNavBar(e) {
     console.log(e.currentTarget);
   }
 }
-//
-// console.log(switchBarForFocusOption);
-//     if (e.target.nodeName === "BUTTON" && e.target.innerText === "My Tasks") {
-//         navButtons[2].classList.toggle("focus");
-//         navButtons[0].classList.toggle("focus");
-//         console.log(e.currentTarget);
-//     }
 
-//     if (e.target.nodeName === "BUTTON" && e.target.innerText === "In Progress") {
-//         navButtons[0].classList.toggle("focus");
-//         navButtons[1].classList.toggle("focus");
-
-//         console.log(e.currentTarget);
-//     }
-//     //nodeName = BUTTON
-//     if (e.target.nodeName === "BUTTON" && e.target.innerText === "Completed") {
-//         navButtons[0].classList.toggle("focus");
-//         navButtons[2].classList.toggle("focus");
-//         console.log(e.currentTarget);
-//     }
-// }
 
 switchBarForFocusOption.addEventListener("click", switchNavBar);
 console.log(switchBarForFocusOption.childNodes[1]);
@@ -58,3 +38,5 @@ function testStyle() {
 }
 
 document.addEventListener("click", testStyle);
+
+
